@@ -9,8 +9,8 @@ const getMark = require("./getMark.js");
 
 app.post("/sendUserData", function (req, res) { // запрос ответ
     console.log(req.body)
-    res.send(req.body)
-    getMark.getMark(req.body);
+    let masMark = getMark.getMark(req.body);
+    res.send(masMark)
 })
 
 app.listen(5000, function () {
