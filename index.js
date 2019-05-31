@@ -5,11 +5,11 @@ var cors = require('cors')
 app.use(bodyParser.json())
 app.use(cors())
 
-const getMark = require("./getMark.js");
+const getMark = require("./getMarkNew.js");
 
-app.post("/sendUserData", function (req, res) { // запрос ответ
+app.post("/sendUserData", async function (req, res) { // запрос ответ
     console.log(req.body)
-    let masMark = getMark.getMark(req.body);
+    let masMark = await getMark.getMark(req.body);
     res.send(masMark)
 })
 
