@@ -5,7 +5,7 @@ var cors = require('cors')
 app.use(bodyParser.json())
 app.use(cors())
 
-const getMark = require("./getMarkNew.js");
+const getMark = require("./getMarkOnSD.js");
 
 app.post("/sendUserData", async function (req, res) { // запрос ответ
     console.log(req.body)
